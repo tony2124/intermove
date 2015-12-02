@@ -1,4 +1,4 @@
-<?php 
+<?php
 	@session_start();
 
 	$servidor = "localhost";
@@ -6,8 +6,8 @@
 	$contrasenaMySQL = "";
 	$baseDatos = "intermove";
 
-	$conexion = mysql_connect($servidor, $usuarioMySQL, $contrasenaMySQL);
+	@$conexion = mysql_connect($servidor, $usuarioMySQL, $contrasenaMySQL);
 	mysql_select_db($baseDatos, $conexion);
-	
+
 	mysql_query("charset utf8");
 ?>

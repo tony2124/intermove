@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<center><img src="../img/Administrator.png" style="width:200px; height:200px;"></center>
-		<form action="../php/inicio_session_no_guia.php" class="form-horizontal" method="post">
+		<form action="php/inicio_session_no_guia.php" class="form-horizontal" method="post">
 			<br><div class="form-group">
 				<label for="LabelNumeroGuia" class="col-lg-2 control-label">Numero de guia</label>
 				<div class="col-sm-8">
