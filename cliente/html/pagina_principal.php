@@ -1,4 +1,4 @@
-<?php  session_start();?>
+<?php  session_start(); require("../../scripts/conexion.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,45 +18,15 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="#" class="navbar-brand">Maickol Rodriguez</a>
+						<a href="pagina_principal.php" class="navbar-brand">Inicio</a>
 					</div>
 
 
 					<div class="collapse navbar-collapse" id="navbar-1">
 						<ul class="nav navbar-nav">
-							<li><a href="">Item #1</a></li>
-							<li class="active"><a href="">Item #2</a></li>
-							<li class="dropdown">
-								<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">
-									Dropdown <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Item #1</a></li>
-									<li><a href="#">Item #2</a></li>
-									<li><a href="#" class="divider"></a></li>
-									<li><a href="#">Item #4</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">
-									Dropdown 2 <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Item #1</a></li>
-									<li><a href="#">Item #2</a></li>
-									<li><a href="#" class="divider">Item #3</a></li>
-									<li><a href="#">Item #4</a></li>
-								</ul>
-							</li>
+							<li><a href="">prueba</a></li>
 						</ul>
-						<form action="" class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Buscar">
-							</div>
-						</form>
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="">Item #1</a></li>
-							<li class="active"><a href="">Item #2</a></li>
 							<li class="dropdown">
 								<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">
 									Cerrar session <span class="caret"></span>
@@ -72,11 +42,27 @@
 		</header>
 		<div class="container">
 			<div class="row" style="margin-top:70px;">
-				<div class="col-lg-5" style="background:gray; height:300px">
-
+				<div class="col-lg-5 bg-primary" style=" height:100px">
+					<center><h3>Estado Carga</h3></center>
+					<?php
+						$arreglo = array("","PENDIENTE","CANCELADA","CONCREATADA");
+						$sql = "SELECT idintencion_compra FROM confirmacion_compra JOIN publicacion_demanda_servicio ON confirmacion_compra.num_guia=publicacion_demanda_servicio.num_guia WHERE publicacion_demanda_servicio.num_guia='".$_SESSION['numero_guia']."'";
+						$query = mysql_query($sql);
+						$array = mysql_fetch_array($query);
+						$sql2 = "SELECT estado_in_compra FROM intencion_compra WHERE idcarga='".$array['idintencion_compra']."'";
+						$query2 = mysql_query($sql2);
+						$array2 = mysql_fetch_array($query2);
+						echo "<center>".$arreglo[$array2['estado_in_compra']]."</center>";
+					?>
 				</div>
-				<div class="col-lg-offset-2 col-lg-5" style="background:gray; height:300px">
-
+				<div class="col-lg-offset-2 col-lg-5 bg-primary" style="height:100px">
+					<center><h3>Estado de servicio</h3></center>
+					<?php
+						$sql = "SELECT idestado_servicio FROM publicacion_demanda_servicio	WHERE num_guia='".$_SESSION['numero_guia']."'";
+						$queryEstadoServicio = mysql_query($sql);
+						$arrayEstadoServicio = mysql_fetch_array($queryEstadoServicio);
+						echo "<center>".$arreglo[$arrayEstadoServicio['idestado_servicio']]."</center>";
+					?>
 				</div>
 			</div>
 			<br><div class="row">

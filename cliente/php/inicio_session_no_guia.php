@@ -10,7 +10,9 @@
 		$sqlquery = mysql_query($sql);
 		$contar = mysql_num_rows($sqlquery);
 		$array =json_decode($result,TRUE);
-		if($array['success'] && $contar>0){
+		$_SESSION['numero_guia'] = '';
+ 		if($array['success'] && $contar>0){
+ 			$_SESSION['numero_guia'] = $_POST['InputNumeroGuia'];
 			$_SESSION['cliente_por_numero_guia']='iniciado';
 			header("Location: ../html/pagina_principal.php");
 		}else{
