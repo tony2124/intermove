@@ -1,9 +1,14 @@
-
 <<<<<<< HEAD
-maickol rodriguez
+Christopher Baltazar Ambriz
+Alfonso Calderon
 =======
+
+
+maickol rodriguez
+
 Jesus Equihua Equihua
->>>>>>> d089235cca0ac3a28e93fb85a821ee3bca5e4a92
+
 
 Alfonso Calderon
+
 
