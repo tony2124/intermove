@@ -66,10 +66,48 @@
 				</div>
 			</div>
 			<br><div class="row">
-				<div class="col-lg-offset-3 col-lg-5" style="background:gray; height:300px;">
-
+				<div class="col-lg-5 bg-primary" style="height:200px;">
+					<center><h3>Datos transportista</h3></center>
+					<table class="table table-bordered">
+						<tr>
+							<td>Nombre</td>
+							<td>Apellido Paterno</td>
+							<td>Apellido Materno</td>
+						</tr>
+						<?php
+							$sql = "select transportista.nombre_tr,transportista.ap_paterno_tr,transportista.ap_materno_tr,transportista.idtransportista FROM
+									publicacion_demanda_servicio JOIN confirmacion_compra ON
+									publicacion_demanda_servicio.num_guia=confirmacion_compra.num_guia JOIN intencion_compra ON
+									confirmacion_compra.idintencion_compra=intencion_compra.idcarga
+									JOIN cliente ON intencion_compra.id_cliente=cliente.id_cliente
+									JOIN telefono ON cliente.idtelefono = telefono.idtelefono
+									JOIN transportista ON transportista.idtelefono = telefono.idtelefono
+									WHERE publicacion_demanda_servicio.num_guia='".$_SESSION['numero_guia']."'";
+									echo $_SESSION['numero_guia'];
+							$query = mysql_query($sql);
+							$array = mysql_fetch_array($query);
+						 ?>
+						 <tr>
+							<td><?php echo $array['nombre_tr'] ?></td>
+							<td><?php echo $array['ap_paterno_tr'] ?></td>
+							<td><?php echo $array['ap_materno_tr'] ?></td>
+						 </tr>
+					</table>
+				</div>
+				<div class="col-lg-offset-2 col-lg-5 bg-primary" style="height:200px">
+					<center><h3>Informacion del veiculo</h3></center>
+					<table class="table table-bordered">
+						<tr>
+							<td>Marca</td>
+							<td>Modelo</td>
+							<td>Placas</td>
+							<td>Tipo camion</td>
+						</tr>
+					<?php echo $array['idtransportista']; ?>
+					</table>
 				</div>
 			</div>
+
 
 		</div>
 	<?php }else{ header("Location: pagina_inicio_numero_guia.php"); }?>
