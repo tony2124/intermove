@@ -2,3 +2,6 @@ Nuevo archivo
 
 
 un jeemplo
+
+una linea de texto 
+
