@@ -14,7 +14,7 @@
  		if($array['success'] && $contar>0){
  			$_SESSION['numero_guia'] = $_POST['InputNumeroGuia'];
 			$_SESSION['cliente_por_numero_guia']='iniciado';
-			header("Location: ../html/pagina_principal.php");
+			header("Location: ../html/pagina_principal.php?pagina=principal");
 		}else{
 			$_SESSION['cliente_por_numero_guia']='no-iniciado';
 			header("Location: ../");
