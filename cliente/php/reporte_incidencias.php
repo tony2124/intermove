@@ -1,6 +1,6 @@
 <div class="container" style="margin-top:100px;">
 	<div class="row">
-		<section class="col-lg-5 bg-primary" style="height:200x">
+		<section class="col-lg-offset-3 col-lg-6 bg-primary" style="height:200px">
 			<center><h3>Reporte de incidencia</h3></center>
 			<?php
 				$sql = "SELECT c_incidencia_ruta.nombre_incidencia,reporte_incidencia.fecha_incidencia FROM publicacion_demanda_servicio

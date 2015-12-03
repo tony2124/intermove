@@ -30,6 +30,10 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="pagina_principal.php?pagina=reporte_incidencias">Reporte de incidencias <span class="glyphicon glyphicon-circle-arrow-up"></span></a></li>
+									<li><a href="pagina_principal.php?pagina=intencionCompraConfirmacionCompra">
+										Intencion compra & confirmacion compra <span class="glyphicon glyphicon-circle-arrow-up"></span>
+									</a></li>
+									<li><a href="pagina_principal.php?pagina=mostrarCarga">Mostrar carga <span class="glyphicon glyphicon-circle-arrow-up"></span></a></li>
 								</ul>
 							</li>
 						</ul>
@@ -54,7 +58,12 @@
 		 	if($_GET["pagina"]=='reporte_incidencias'){
 		 		include("../php/reporte_incidencias.php");
 		 	}
-
+		 	if($_GET["pagina"]=='intencionCompraConfirmacionCompra'){
+		 		include("../php/MostrarintencionCompraConfirmacionCompra.php");
+		 	}
+		 	if($_GET["pagina"]=='mostrarCarga'){
+		 		include("../php/mostrarCarga.php");
+		 	}
 		 ?>
 	<?php }else{ header("Location: pagina_inicio_numero_guia.php"); }?>
 </body>
