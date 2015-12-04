@@ -85,6 +85,37 @@
 				</div>
 
 				<div class="form-group">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+						<label for="" class="control-label">RFC:</label>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5  col-xs-offset-1 col-lg-offset-1">
+						<input type="text" class="form-control" name="rfc_admin" required pattern="[a-zA-Z 0-9]*" placeholder="RFC">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 ">
+						<label for="" class="control-label">Sexo:</label>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5  col-xs-offset-1">
+						<select name="sexo_admin" class="form-control select" required>
+							<option value="" selected >ELEGIR UNA OPCIÓN</option>
+							<option value="1">Masculino</option>
+							<option value="2">Femenino</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 ">
+						<label for="" class="control-label">Fecha de nacimiento:</label>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5  col-xs-offset-1">
+						<input type="date" class="form-control" name="fecha_nac_admin" required placeholder="aaaa-mm-dd">
+					</div>
+				</div>
+
+				<div class="form-group">
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-1 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
 						<label for="" class="control-label">Usuario:</label>
 					</div>
@@ -127,7 +158,7 @@
 					</div>
 					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5  col-xs-offset-1">
 						<select name="role_admin" class="form-control select" required>
-							<option value="" selected >ELEGIR ROL</option>
+							<option value="" selected >ELEGIR UNA OPCIÓN</option>
 							<option value="1">Ventas</option>
 							<option value="2">Asignación</option>
 							<option value="3">Incidencias</option>
