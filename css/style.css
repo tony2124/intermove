@@ -1,0 +1,29 @@
+.contenido-general{
+	background-color: #F8F8F8;
+	/*border-radius: 0px 0px 5px 5px;*/
+	/*border: 1px solid #333333;*/
+	/*box-shadow: 0 0 5px 3px rgba(0,0,0,0.5);*/
+	margin: 0px auto;
+	margin-top: 50px;
+	width: 100%;
+}
+.modal-header{
+	background-color: #337ab7;
+}
+.img-header{
+	width: 60px;
+}
+.body-logeo{
+	background: #7FBF22 url('../img/fondo-body.jpg') no-repeat fixed center;
+	background-position: top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.centro{
+	text-align: center;
+}
+h3.titulo-header{
+	color: #ffffff;
+}

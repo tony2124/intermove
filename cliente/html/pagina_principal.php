@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<title>INTER MOV</title>
 	<link rel="stylesheet"  href="../../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v3"></script>
 </head>
-<body>
+<body class="body-logeo">
 	<?php if($_SESSION['cliente_por_numero_guia']=='iniciado'){  ?>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -34,6 +36,9 @@
 										Intencion compra & confirmacion compra <span class="glyphicon glyphicon-circle-arrow-up"></span>
 									</a></li>
 									<li><a href="pagina_principal.php?pagina=mostrarCarga">Mostrar carga <span class="glyphicon glyphicon-circle-arrow-up"></span></a></li>
+									<li><a href="pagina_principal.php?pagina=direccionIntencionCompra">
+										Direccion de intencion compra <span class="glyphicon glyphicon-circle-arrow-up"></span>
+									</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -63,6 +68,12 @@
 		 	}
 		 	if($_GET["pagina"]=='mostrarCarga'){
 		 		include("../php/mostrarCarga.php");
+		 	}
+		 	if($_GET["pagina"]=='direccionIntencionCompra'){
+		 		include("../php/direccionIntencionCompra.php");
+		 	}
+		 	if($_GET["pagina"]=='mostrar_mapa'){
+		 		include("../php/mostrar_mapa.php");
 		 	}
 		 ?>
 	<?php }else{ header("Location: pagina_inicio_numero_guia.php"); }?>
