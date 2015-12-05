@@ -1,3 +1,10 @@
+<div class="contenido-general">
+			<div class="modal-header">
+        		<h3 class="titulo-header">
+        			<img class="img-header" src="../../img/Administrator.png"> Agregar Producto
+        		</h3>
+      		</div>
+</div>
 <?php
 	session_start();
 	require("../../scripts/conexion.php");
