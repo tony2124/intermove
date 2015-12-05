@@ -1,0 +1,129 @@
+body{
+	background-color: #F8F8F8;
+	width: 100%;
+	height: 100%;
+}
+
+.body-logeo{
+	/*background: #F8F8F8 url('../../img/fondo_login.jpg') no-repeat fixed center;
+	background-position: top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+
+.pagina{
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+}
+
+.contenedor-logeo{
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0 0 5px 3px rgba(0,0,0,0.5);
+	margin: 0px auto;
+	width: 600px;
+	height: auto;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -205px;
+	margin-left: -300px;
+	z-index: 1;
+}
+
+.img-camino{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: auto;
+	height: auto;
+	z-index: 0;
+}
+
+.contenedor-admin{
+	margin: 0pc auto;
+	padding-top: 60px;
+	width: 95%;
+}
+
+h3.titulo-header{
+	color: #ffffff;
+}
+
+h3.titulo-contenido{
+	color: #ffffff;
+}
+
+.modal-header{
+	background-color: #337ab7;
+}
+
+.modal-body, .modal-footer{
+	background-color: #F8F8F8;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.img-header{
+	width: 60px;
+}
+
+.centro{
+	text-align: center;
+}
+
+.derecha{
+	text-align: right;
+}
+
+.alert{
+	text-align: center;
+}
+
+.navbar-right{
+	margin-right: 5px;
+}
+
+.contenido-general{
+	background-color: #F8F8F8;
+	margin: 0px auto;
+	margin-top: 50px;
+	width: 100%;
+}
+
+.icono-ver{
+	cursor: pointer;
+}
+
+/*.pendiente{
+	color: #ec971f;
+	font-weight: bold;
+}
+
+.rechazado{
+	color: #d43f3a;
+	font-weight: bold;
+}
+
+.enviado{
+	color: #286090;
+	font-weight: bold;
+}
+
+.concretado{
+	color: #449d44;
+	font-weight: bold;
+}
+
+.cancelado{
+	color: #d43f3a;
+	font-weight: bold;
+}
+
+.aprobado{
+	color: #31b0d5;
+	font-weight: bold;
+}*/
