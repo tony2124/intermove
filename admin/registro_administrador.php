@@ -192,7 +192,6 @@
 	<script type="text/javascript">
 		$(document).ready(function() {    
     		$('#usuario_admin').blur(function(){
-        		//$('#Info').html('<img src="loader.gif" alt="" />').fadeOut(1000);
 
         		var username = $(this).val();        
         		var dataString = 'username='+username;
