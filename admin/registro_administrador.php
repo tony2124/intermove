@@ -34,7 +34,7 @@
 </head>
 <body>
 
-	<!-- ELIMINAR LINEA SUPERIOR PARA ENTREGAR -->
+	<!-- ELIMINAR HEADER PARA ENTREGAR -->
 	<head>
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="container" style="color:#fff;" >
@@ -43,7 +43,7 @@
 		</div>
 	</head>
 	<br><br>
-	<!-- FIN DE LINEA -->
+	<!-- FIN DE HEADER -->
 
 
 	<form action="../scripts/registro_admin.php" method="post" role="form" class="form-horizontal" >
@@ -148,7 +148,10 @@
 						<label for="" class="control-label">Correo Electrónico:</label>
 					</div>
 					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5  col-xs-offset-1">
-						<input type="email" class="form-control" name="correo_admin" required placeholder="Correo electrónico">
+						<div class="input-group">
+							<span class="input-group-addon">@</span>
+							<input type="email" class="form-control" name="correo_admin" required placeholder="Correo electrónico">
+						</div>
 					</div>
 				</div>
 

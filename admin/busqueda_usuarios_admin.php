@@ -5,14 +5,13 @@
 	<title>BÚSQUEDA</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
 
 	<style>
 		body{
 			padding-top: 30px;
 		}
-	</style>
-
-	
+	</style>	
 
 </head>
 <body>
@@ -26,19 +25,18 @@
 		</div>
 	</head>
 	<br><br>
-	
 	<!-- FIN DE HEADER -->
 
 	<div class="container">
 		<div class="row">
 			<div class="form">
 				<div class="form-group">
-					<div class="col-lg-4">
+					<div class="col-lg-4 col-md-5">
 						<input class="form-control" onkeyup="if(event.keyCode == 13) buscar();" type="text" id="buscar" name="buscar" placeholder="Buscar por Nombre/Apellido/Usuario">
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6 ">
 						<select class="form-control" name="filtro_estado" id="filtro_estado">
 							<option value="" selected>Sin filtro</option>
 							<option value="1">Activo</option>
@@ -47,7 +45,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-6">
 						<select class="form-control" name="filtro_rol" id="filtro_rol">
 							<option value="" selected>Sin filtro</option>
 							<option value="1">Ventas</option>
@@ -60,7 +58,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-lg-2">
-						<center><button type="submit" class="btn btn-primary" onclick="buscar()">Buscar</button></center>
+						<center><button type="submit" class="btn btn-primary" onclick="buscar()"><i class="fa fa-search"></i> Buscar</button></center>
 					</div>
 				</div>
 			</div>
@@ -78,9 +76,10 @@
 <script src="../api/jquery/jquery-1.11.3.min.js"></script>
 <script src="../css/bootstrap/js/bootstrap.min.js"></script>
 </body>
-<script type="text/javascript">
-	function buscar(){
 
+<script type="text/javascript">
+	function buscar()
+	{
 			var dato = $('#buscar').val();
 			var url = '../admin/buscar_admin.php';
 			var estado = $('#filtro_estado').val();
@@ -99,5 +98,6 @@
 			});
 	}
 	buscar();
+						
 	</script>
 </html>
