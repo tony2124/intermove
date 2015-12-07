@@ -7,46 +7,46 @@
 </div>
 <div class="container">
 			<div class="row" style="margin-top:70px;">
-				<div class="col-lg-5 bg-primary" style=" height:100px; border-radius:5px;">
-					<center><h3>Estado Carga</h3></center>
+				<div class="col-lg-5 panel-heading panel panel-default panel-accent-gold" style=" height:100px; border-radius:5px;">
+						<h3 class="panel-title class="panel-title""><i class="fa fa-cube"></i> Estado Carga</h3>
+
+
 					<?php
 						$arreglo = array("","PENDIENTE","CANCELADA","CONCREATADA");
-						$sql = "SELECT idintencion_compra FROM confirmacion_compra JOIN publicacion_demanda_servicio ON confirmacion_compra.num_guia=publicacion_demanda_servicio.num_guia WHERE publicacion_demanda_servicio.num_guia='".$_SESSION['numero_guia']."'";
+						$sql = "SELECT intencion_compra.estado_int_compra FROM confirmacion_compra
+						JOIN publicacion_demanda_servicio ON confirmacion_compra.num_guia=publicacion_demanda_servicio.num_guia
+						JOIN intencion_compra ON confirmacion_compra.idintencion_compra=intencion_compra.idintencion_compra
+						 WHERE publicacion_demanda_servicio.num_guia='".$_SESSION['numero_guia']."'";
 						$query = mysql_query($sql);
 						$array = mysql_fetch_array($query);
-						$sql2 = "SELECT estado_int_compra FROM intencion_compra WHERE idintencion_compra='".$array['idintencion_compra']."'";
-						$query2 = mysql_query($sql2);
-						$array2 = mysql_fetch_array($query2);
-						echo "<center>".$arreglo[$array2['estado_int_compra']]."</center>";
+						echo "<br><center><p>".$arreglo[$array['estado_int_compra']]."</p></center>";
 					?>
 				</div>
-				<div class="col-lg-offset-2 col-lg-5 bg-primary" style="height:100px; border-radius:5px;">
-					<center><h3>Estado de servicio</h3></center>
+				<div class="col-lg-offset-2 col-lg-5 panel-heading panel panel-default panel-accent-gold" style="height:100px; border-radius:5px;">
+					<h3 class="panel-title"><i class="fa fa-cube"></i> Estado de servicio</h3>
 					<?php
 						$sql = "SELECT idestado_servicio FROM publicacion_demanda_servicio	WHERE num_guia='".$_SESSION['numero_guia']."'";
 						$queryEstadoServicio = mysql_query($sql);
 						$arrayEstadoServicio = mysql_fetch_array($queryEstadoServicio);
-						echo "<center>".$arreglo[$arrayEstadoServicio['idestado_servicio']]."</center>";
+						echo "<br><center>".$arreglo[$arrayEstadoServicio['idestado_servicio']]."</center>";
 					?>
 				</div>
 			</div>
 			<br><div class="row">
-				<div class="col-lg-5 bg-primary" style="height:200px; border-radius:5px;">
-					<center><h3>Datos transportista</h3></center>
+				<div class="col-lg-5 panel-heading panel panel-default panel-accent-gold" style="height:200px; border-radius:5px;">
+					<h3 class="panel-title"><i class="fa fa-cube"></i> Datos transportista</h3><br>
 					<table class="table table-condensed">
 						<tr>
 							<td class="centro">Nombre</td>
 							<td class="centro">Apellido Paterno</td>
 							<td class="centro">Apellido Materno</td>
-							<td class="centro">Correo</td>
 						</tr>
 						<?php
-							$sql = "select transportista.nombre_tr,transportista.ap_paterno_tr,transportista.ap_materno_tr,transportista.idtransportista,transportista.email
+							$sql = "select transportista.nombre_tr,transportista.ap_paterno_tr,transportista.ap_materno_tr,transportista.idtransportista
 								FROM publicacion_demanda_servicio
 								JOIN servicio_transportista ON publicacion_demanda_servicio.idpublicacion_demanda_servicio=servicio_transportista.idpublicacion_demanda_servicio
 								JOIN  transportista ON servicio_transportista.idtransportista=transportista.idtransportista
 								WHERE publicacion_demanda_servicio.num_guia='".$_SESSION['numero_guia']."'";
-									echo $_SESSION['numero_guia'];
 							$query = mysql_query($sql);
 							$array = mysql_fetch_array($query);
 						 ?>
@@ -54,12 +54,11 @@
 							<td class="centro"><?php echo $array['nombre_tr'] ?></td>
 							<td class="centro"><?php echo $array['ap_paterno_tr'] ?></td>
 							<td class="centro"><?php echo $array['ap_materno_tr'] ?></td>
-							<td class="centro"><?php echo $array['email'] ?></td>
 						 </tr>
 					</table>
 				</div>
-				<div class="col-lg-offset-2 col-lg-5 bg-primary" style="height:200px; border-radius:5px;">
-					<center><h3>Informacion del veiculo</h3></center>
+				<div class="col-lg-offset-2 col-lg-5 panel-heading panel panel-default panel-accent-gold" style="height:200px; border-radius:5px;">
+					<h3 class="panel-title"><i class="fa fa-cube"></i> Informacion del veiculo</h3><br>
 					<table class="table table-condensed">
 						<tr>
 							<td class="text-center">Marca</td>

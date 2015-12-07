@@ -5,10 +5,11 @@
 	<meta charset="UTF-8">
 	<title>INTER MOV</title>
 	<link rel="stylesheet"  href="../../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="../../css/style.css">
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v3"></script>
 </head>
-<body class="body-logeo">
+<body class="">
 	<?php if($_SESSION['cliente_por_numero_guia']=='iniciado'){  ?>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -38,6 +39,9 @@
 									<li><a href="pagina_principal.php?pagina=mostrarCarga">Mostrar carga <span class="glyphicon glyphicon-circle-arrow-up"></span></a></li>
 									<li><a href="pagina_principal.php?pagina=direccionIntencionCompra">
 										Direccion de intencion compra <span class="glyphicon glyphicon-circle-arrow-up"></span>
+									</a></li>
+									<li><a href="pagina_principal.php?pagina=bitacora">
+										Bitacora <span class="glyphicon glyphicon-circle-arrow-up"></span>
 									</a></li>
 								</ul>
 							</li>
@@ -74,6 +78,9 @@
 		 	}
 		 	if($_GET["pagina"]=='mostrar_mapa'){
 		 		include("../php/mostrar_mapa.php");
+		 	}
+		 	if($_GET["pagina"]=='bitacora'){
+		 		include("../php/bitacora.php");
 		 	}
 		 ?>
 	<?php }else{ header("Location: pagina_inicio_numero_guia.php"); }?>

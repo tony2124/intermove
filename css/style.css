@@ -5,10 +5,12 @@
 	/*box-shadow: 0 0 5px 3px rgba(0,0,0,0.5);*/
 	margin: 0px auto;
 	margin-top: 50px;
+	height: 100px;
 	width: 100%;
 }
 .modal-header{
-	background-color: #337ab7;
+	height: 150px;
+	background-color: #f0ad4e;
 }
 .img-header{
 	width: 60px;
@@ -26,4 +28,77 @@
 }
 h3.titulo-header{
 	color: #ffffff;
+}
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`)
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo,
+		pero de esta manera (siempre que no le demos padding),
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+	margin-left: 43%;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+
+	color: #888;
+
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+h3{
+	    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+.h1, .h2, .h3, h1, h2, h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+.panel.panel-accent-gold{
+	border-top: 3px solid #f0ad4e;
+}
+.panel-heading {
+	background-color: #fff;
+    border-bottom: 0;
+    font-weight: bold;
+}
+.panel-title{
+	margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.color-botones{
+	background: #f0ad4e;
+}
+.dataTables_wrapper table.table-list {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+}
+.dataTables_wrapper .dataTables_info {
+    padding: 9px 10px;
+    background-color: #006587;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    font-size: 0.9em;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    text-align: left !important;
 }

@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$_SESSION['cliente_por_numero_guia']='';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -10,8 +10,8 @@
     ?>
 
 <div class="container" style="margin-top:50px;margin-left:200px;">
-    <h1>Mapa</h1>
-    <div id="mapa" style="width:80%; height:550px;">
+    <div id="mapa" class="panel-heading panel panel-default panel-accent-gold" style="width:820px; height:500px;">
+       <h3 class="panel-title"><i class="fa fa-cube"></i> Mapa</h3>
         --ACA VA EL MAPA"
     </div>
     <script type="text/javascript">
@@ -69,5 +69,3 @@
     </script>
 
 </div>
-<?php echo $array['puntoX']."<br>";
- echo $array['puntoY']; ?>
