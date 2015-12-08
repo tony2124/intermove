@@ -1,14 +1,19 @@
 <div class="contenido-general">
 			<div class="modal-header">
         		<h3 class="titulo-header">
-        			<i class="fa fa-car fa-4x"></i> Mostra Carga
+        			<div class="col-md-1">
+        				<i class="fa fa-car fa-4x"></i>
+        			</div>
+        			<div class="col-md-3">
+        				<h3>Mostra Carga</h3>
+        			</div>
         		</h3>
 
       		</div>
 </div>
 <div class="container">
 	<section class="col-md-offset-2 col-md-8 panel-heading panel panel-default panel-accent-gold" style="margin-top:100px;">
-		<h3 class="panel-title"><i class="fa fa-cube"></i> Datos</h3><br>
+		<h3 class="panel-title"><i class="fa fa-car"></i> Datos</h3><br>
 		<table class="table table-condensed">
 			<thead>
 				<tr>

@@ -1,7 +1,12 @@
 <div class="contenido-general">
 			<div class="modal-header">
         		<h3 class="titulo-header">
-        			<img class="img-header" src="../../img/Administrator.png"> Pagina Principal
+        			<div class="col-md-1">
+        				<i class="fa fa-desktop fa-4x"></i>
+        			</div>
+        			<div class="col-md-2">
+        				<h3>Pagina Principal</h3>
+        			</div>
         		</h3>
       		</div>
 </div>
@@ -9,7 +14,6 @@
 			<div class="row" style="margin-top:70px;">
 				<div class="col-lg-5 panel-heading panel panel-default panel-accent-gold" style=" height:100px; border-radius:5px;">
 						<h3 class="panel-title class="panel-title""><i class="fa fa-cube"></i> Estado Carga</h3>
-
 
 					<?php
 						$arreglo = array("","PENDIENTE","CANCELADA","CONCREATADA");

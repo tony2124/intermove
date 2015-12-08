@@ -1,9 +1,11 @@
 <div class="contenido-general">
 			<div class="modal-header">
         		<h3 class="titulo-header">
-        			<i class="fa fa-truck fa-4x"></i> Mostra Carga
+        		 	<div class="col-md-1"><i class="fa fa-truck fa-4x"></i></div>
+        			 <div class="col-md-3">
+        			 	<h3>Mostra Carga</h3>
+        			 </div>
         		</h3>
-        		<?php include('../php/mostrar_calificacion.php'); ?>
       		</div>
 </div>
 <div class="container" style="margin-top:100px;">
@@ -30,7 +32,6 @@
 		<div class="col-lg-12">
 			<center>
 			<input type="button" onClick="window.location = 'pagina_principal.php?pagina=mostrar_mapa&id=<?php echo $array['idintencion_compra']; ?>'"; class="btn btn-default color-botones" value="Mostrar Mapa" />
-			<input type="button" onClick="window.location = '../php/generar_factura.php?id=<?php echo $array['idintencion_compra']; ?>'"; class="btn btn-default color-botones" value="Facturar" />
 			<button type="button" class="btn btn-default color-botones" data-toggle="modal" data-target="#myModal">
   				Carga entregada
 			</button>
