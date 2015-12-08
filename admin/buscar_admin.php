@@ -156,69 +156,11 @@
 			<div class="modal-header" style="background-color:#04B4AE; color:white;">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h2 class="text-center"><img src="../img/Modify.png" alt="100">	Editar usuario</h2>
-			</div>
-							
-		<form method="post" role="form" action="../admin/editar_usuarios.php" class="form-horizontal">
+			</div>		
 			<div class="modal-body">
 			<!-- table -->
-										
-				<div class="form-group">
-					<input type="hidden" value="<?php echo $i;?>" name="id" required>
-				</div>
-
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Nombre:</label>
-					<div class="col-lg-8">
-						<input type="text" class="form-control" value="<?php echo $edit['nombre_emp'];?>" name="nombre_adm" required>
-					</div>
-				</div>
-									
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Apellido paterno:</label>
-					<div class="col-lg-8">
-						<input type="text" class="form-control" value="<?php echo $edit['ap_paterno_emp'];?>" name="ap_pat_adm" required>
-					</div>
-				</div>
-													
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Apellido materno:</label>
-					<div class="col-lg-8">
-						<input type="text" class="form-control" value="<?php echo $edit['ap_materno_emp'];?>" name="ap_mat_adm" required>
-					</div>
-				</div>
-													
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Usuario:</label>
-					<div class="col-lg-8">
-						<input type="text" class="form-control" value="<?php echo $edit['username'];?>" name="username_adm" required>
-					</div>
-				</div>
-													
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Fecha de nacimiento:</label>
-					<div class="col-lg-8">
-						<input type="date-time" class="form-control" value="<?php echo $edit['fecha_nac_emp'];?>" name="fecha_nac_adm" required>
-					</div>
-				</div>
-				
-				<!-- Telefono -->
-													
-				<div class="form-group">
-					<label for="" class="control-label col-lg-4">Correo electrónico:</label>
-					<div class="col-lg-8">
-						<input type="email" class="form-control" value="<?php echo $edit['email'];?>" name="email_adm" required>
-					</div>
-				</div>
-													
-				<!-- Privilegios -->
-											
-			</div>
-			
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				<button type="submit" class="btn btn-primary">Guardar cambios</button>
-			</div>
-		</form>
+			<?php include("../admin/editarAdministrador.php");?>
+			</div>	
 		</div>
 	</div>
 </div>
@@ -233,47 +175,17 @@
 				<h2 class="text-center"><img src="../img/Lock.png" width="50" alt="20">Modificar contraseña</h2>
 			</div>
 
-		<form  method="post" class="form-horizontal" role="form" action="../admin/modificar_password.php">
+		
 			<div class="modal-body">
-											
-				<div class="form-group">
-					<input type="hidden" value="<?php echo $i;?>" name="id" required>
-				</div>
-
-				<div class="form-group">
-					<label for="mod_password_act_adm" class="control-label col-lg-4">Contraseña actual:</label>
-					<div class="col-lg-8">
-						<input class="form-control" type="password"  id="mod_password_act_adm" name="mod_password_act_adm" placeholder="Introduce contraseña actual" required>
-					</div>
-					<!-- <div id="verificar"></div> -->
-				</div>
-
-				<div class="form-group">
-					<label for="mod_password_new_adm" class="control-label col-lg-4">Contraseña nueva:</label>
-					<div class="col-lg-8">
-						<input class="form-control" type="password" id="mod_password_new_adm" name="mod_password_new_adm" placeholder="Introduce nueva contraseña" required>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label for="mod_password_new_adm" class="control-label col-lg-4">Repetir contraseña:</label>
-					<div class="col-lg-8">
-						<input class="form-control" type="password" id="mod_password_new2_adm" name="mod_password_new2_adm" placeholder="Repetir contraseña" required>
-					</div>
-				</div>
-											
+				<!-- Table -->
+				<?php include("../admin/modificarContrasena.php");?>
 			</div>
-
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				<button type="submit" class="btn btn-primary">Guardar cambios</button>
-			</div>
-		</form>
 		</div>
 	</div>
 </div>
 <!-- Modal password -->
-						
+
+
 
 <?php 
 	$i=$i+1; } 
