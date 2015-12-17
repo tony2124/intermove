@@ -44,8 +44,8 @@
 
 		?>
 </body>
-<script src="../css/bootstrap/css/jquery.js"></script>
-<script src="../css/bootstrap/css/bootstrap.min.js"></script>
+<script src="../css/bootstrap/js/jquery.js"></script>
+<script src="../css/bootstrap/js/bootstrap.min.js"></script>
 <script src="../css/bootstrap/js/jquery.numeric.js"></script>
 <script type="text/javascript">
 	$('#InputNumeroGuia').numeric();

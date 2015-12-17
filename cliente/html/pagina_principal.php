@@ -7,6 +7,7 @@
 	<link rel="stylesheet"  href="../../css/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="shortcut icon" href="../../img/login.png" type='image/png'>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v3"></script>
 </head>
 <body class="">
@@ -47,6 +48,7 @@
 								<ul class="dropdown-menu">
 									<li><a href="pagina_principal.php?pagina=mostrarCarga">Mostrar carga <i class="fa fa-truck"></i></a></li>
 									<li><a href="pagina_principal.php?pagina=generar_factura">Facturar carga <i class="fa fa-truck"></i></a></li>
+									<li><a href="pagina_principal.php?pagina=calificacion">Calificacion Carga <i class="fa fa-truck"></i></a></li>
 								</ul>
 							</li>
 
@@ -100,6 +102,9 @@
 		 	}
 		 	if($_GET["pagina"]=='ConfirmacionCompra'){
 		 		include("../php/confirmacion_compra.php");
+		 	}
+		 	if($_GET["pagina"]=='calificacion'){
+		 		include("../php/mostrar_calificacion.php");
 		 	}
 		 	if($_GET["pagina"]=='generar_factura'){
 		 		header("Location: ../php/generar_factura.php");
